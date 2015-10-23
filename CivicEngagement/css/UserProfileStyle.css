@@ -1,0 +1,56 @@
+
+
+	
+.request-meta {
+color: #91A1B5;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+margin-top: 4px;
+}
+
+
+
+
+a {
+color: #598CD1;
+text-decoration: none;
+}
+.request-time {
+margin-left: 4px;
+font-size: 12px;
+font-weight: 500;
+white-space: nowrap;
+color: #91A1B5;
+}
+
+.request-meta  {
+font-weight: 500;
+padding: 5px;
+margin-top: 2px;
+}
+.well-inverted{
+	background-color: white;
+border: 1px solid #CED5DE;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: 0 1px #CED5DE;
+-moz-box-shadow: 0 1px #CED5DE;
+box-shadow: 0 1px #CED5DE;
+}
+
+
+
+
+
+    
+
+	@media(max-width:767px)
+{    
+.navbar-collapse {
+     max-height: none;
+}
+}
+ 
+	

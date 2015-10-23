@@ -1,0 +1,57 @@
+
+
+<!doctype html>
+<html>
+	<head>
+		<title>Bar Chart</title>
+		<script src="Chart.js-master/Chart.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>
+	
+	var dataarr= new Array();
+
+  
+    $.get("GetChartInformation?cityid=100000",
+   
+    function(data,status){
+     // alert("Data: " + data + "\nStatus: " + status);
+	 
+	  dataarr=data.split(",");
+
+	var barChartData = {
+			labels : ["Recieved","In Progress.","Completed."],
+			datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : dataarr
+				}
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+	
+	 
+    });
+  
+
+	
+
+		
+	</script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		<style>
+			canvas{
+			}
+		</style>
+        
+         <link href="css/dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<canvas class="col-lg-12 col-lg-offset-5" style="margin-top:100px" id="canvas"  ></canvas>
+
+    
+	
+	</body>
+</html>

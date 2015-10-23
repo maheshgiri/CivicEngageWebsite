@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>CivicEngagementSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>indexnouser.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+<context-param> 
+    <description>Location to store uploaded files</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+       F:\eclipse-jee-juno-win32\apache-tomcat-6.0.37\apache-tomcat-6.0.37\webapps\CivicEngagement\User\
+     </param-value> 
+</context-param>  
+
+<context-param> 
+    <description>Location to store uploaded mobile files</description> 
+    <param-name>mobilefile-upload</param-name> 
+    <param-value>
+       F:\eclipse-jee-juno-win32\apache-tomcat-6.0.37\apache-tomcat-6.0.37\webapps\CivicEngagement\User\requests\
+     </param-value> 
+</context-param>  
+
+
+
+
+<error-page>
+    <error-code>404</error-code>
+    <location>/Error404.html</location>
+</error-page>
+
+<servlet>
+<servlet-name>Login</servlet-name>
+<servlet-class>Login</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Login</servlet-name>
+<url-pattern>/login</url-pattern>
+</servlet-mapping>
+ 
+
+<servlet>
+<servlet-name>NewRequestLogin</servlet-name>
+<servlet-class>NewRequestLogin</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>NewRequestLogin</servlet-name>
+<url-pattern>/NewRequestLogin</url-pattern>
+</servlet-mapping>
+ 
+
+<servlet>
+<servlet-name>SignUp</servlet-name>
+<servlet-class>SignUp</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>SignUp</servlet-name>
+<url-pattern>/signup</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>Logout</servlet-name>
+<servlet-class>Logout</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Logout</servlet-name>
+<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+
+
+
+<servlet>
+<servlet-name>ProfilePhotoUpdate</servlet-name>
+<servlet-class>ProfilePhotoUpdate</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ProfilePhotoUpdate</servlet-name>
+<url-pattern>/ProfilePhotoUpdate</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>UserDataUpdate</servlet-name>
+<servlet-class>UserDataUpdate</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>UserDataUpdate</servlet-name>
+<url-pattern>/UserDataUpdate</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>ChangePassword</servlet-name>
+<servlet-class>ChangePassword</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ChangePassword</servlet-name>
+<url-pattern>/ChangePassword</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>SubmitRequest</servlet-name>
+<servlet-class>SubmitRequest</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>SubmitRequest</servlet-name>
+<url-pattern>/SubmitRequest</url-pattern>
+</servlet-mapping>
+ 
+<servlet>
+<servlet-name>GetUserIssues1</servlet-name>
+<servlet-class>GetUserIssues1</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetUserIssues1</servlet-name>
+<url-pattern>/GetUserIssues1</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>GetRequestDetailsOnClick</servlet-name>
+<servlet-class>GetRequestDetailsOnClick</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetRequestDetailsOnClick</servlet-name>
+<url-pattern>/GetRequestDetailsOnClick</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>GetNearbyIssues</servlet-name>
+<servlet-class>GetNearbyIssues</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetNearbyIssues</servlet-name>
+<url-pattern>/GetNearbyIssues</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>GetUserPassword</servlet-name>
+<servlet-class>GetUserPassword</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetUserPassword</servlet-name>
+<url-pattern>/GetUserPassword</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>GetRecentIssuesForIndexPage</servlet-name>
+<servlet-class>GetRecentIssuesForIndexPage</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetRecentIssuesForIndexPage</servlet-name>
+<url-pattern>/GetRecentIssuesForIndexPage</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>GetAllNearbyIssues</servlet-name>
+<servlet-class>GetAllNearbyIssues</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetAllNearbyIssues</servlet-name>
+<url-pattern>/GetAllNearbyIssues</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>GetAllFilteredIssues</servlet-name>
+<servlet-class>GetAllFilteredIssues</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetAllFilteredIssues</servlet-name>
+<url-pattern>/GetAllFilteredIssues</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+
+<servlet-name>GetFilteredIssues</servlet-name>
+<servlet-class>GetFilteredIssues</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetFilteredIssues</servlet-name>
+<url-pattern>/GetFilteredIssues</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>GetCityDetails</servlet-name>
+<servlet-class>GetCityDetails</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetCityDetails</servlet-name>
+<url-pattern>/GetCityDetails</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>AdminLogin</servlet-name>
+<servlet-class>AdminLogin</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>AdminLogin</servlet-name>
+<url-pattern>/AdminLogin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>RequestCRUDController</servlet-name>
+<servlet-class>RequestCRUDController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>RequestCRUDController</servlet-name>
+<url-pattern>/RequestCRUDController</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>DepartmentCRUDController</servlet-name>
+<servlet-class>DepartmentCRUDController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>DepartmentCRUDController</servlet-name>
+<url-pattern>/DepartmentCRUDController</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>CityCRUDController</servlet-name>
+<servlet-class>CityCRUDController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>CityCRUDController</servlet-name>
+<url-pattern>/CityCRUDController</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>ImageUpload</servlet-name>
+   <servlet-class>ImageUpload</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>ImageUpload</servlet-name>
+   <url-pattern>/ImageUpload</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>AdminLogout</servlet-name>
+   <servlet-class>AdminLogout</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>AdminLogout</servlet-name>
+   <url-pattern>/AdminLogout</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>TryMobile</servlet-name>
+   <servlet-class>TryMobile</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>TryMobile</servlet-name>
+   <url-pattern>/TryMobile</url-pattern>
+</servlet-mapping>
+
+
+
+
+<servlet>
+   <servlet-name>SubmitRequestTry</servlet-name>
+   <servlet-class>com.Mobile.SubmitRequestTry</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>SubmitRequestTry</servlet-name>
+   <url-pattern>/SubmitRequestTry</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>PendingRequestCRUDController</servlet-name>
+<servlet-class>pending.requests.RequestCRUDController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>PendingRequestCRUDController</servlet-name>
+<url-pattern>/PendingRequestCRUDController</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>ForgotPassword</servlet-name>
+<servlet-class>ForgotPassword</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ForgotPassword</servlet-name>
+<url-pattern>/ForgotPassword</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>PasswordReset</servlet-name>
+<servlet-class>PasswordReset</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>PasswordReset</servlet-name>
+<url-pattern>/PasswordReset</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>GetLocation</servlet-name>
+<servlet-class>GetLocation</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetLocation</servlet-name>
+<url-pattern>/GetLocation</url-pattern>
+</servlet-mapping>
+
+
+
+
+
+
+<servlet>
+<servlet-name>GetChartInformation</servlet-name>
+<servlet-class>GetChartInformation</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>GetChartInformation</servlet-name>
+<url-pattern>/GetChartInformation</url-pattern>
+</servlet-mapping>
+
+
+
+
+<servlet>
+    <servlet-name>Hello</servlet-name>
+    <jsp-file>/PuneCityNoUser.jsp</jsp-file>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/Pune</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+   <servlet-name>TryLogin</servlet-name>
+   <servlet-class>com.Mobile.LoginTry</servlet-class>
+</servlet>
+
+
+
+<servlet-mapping>
+   <servlet-name>TryLogin</servlet-name>
+   <url-pattern>/TryLogin</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+    <servlet-name>SignUpTry</servlet-name>
+   <servlet-class>com.Mobile.SignUpTry</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SignUpTry</servlet-name>
+    <url-pattern>/SignUpTry</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>GetMobileUserIssues</servlet-name>
+   <servlet-class>com.Mobile.GetMobileUserIssues</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>GetMobileUserIssues</servlet-name>
+    <url-pattern>/GetMobileUserIssues</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+    <servlet-name>MobileRequest</servlet-name>
+   <servlet-class>MobileRequest</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>MobileRequest</servlet-name>
+    <url-pattern>/MobileRequest</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>SendNotification</servlet-name>
+   <servlet-class>com.Mobile.SendNotification</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SendNotification</servlet-name>
+    <url-pattern>/SendNotification</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>SignUpConfirmation</servlet-name>
+   <servlet-class>SignUpConfirmation</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SignUpConfirmation</servlet-name>
+    <url-pattern>/SignUpConfirmation</url-pattern>
+</servlet-mapping>
+
+
+
+
+</web-app>
